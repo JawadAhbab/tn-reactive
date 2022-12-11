@@ -1,6 +1,6 @@
 {
   "name": "tn-reactive",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "",
   "keywords": [],
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.20.6",
-    "nanoid": "^4.0.0",
+    "nanoid": "^3.3.4",
     "tn-react-hooks": "^1.5.3",
     "tn-validate": "^3.1.5"
   },

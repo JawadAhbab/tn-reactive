@@ -1,6 +1,6 @@
 {
   "name": "tn-reactive",
-  "version": "4.1.1",
+  "version": "5.0.0",
   "description": "",
   "keywords": [],
   "main": "dist/index.js",
@@ -9,6 +9,10 @@
     "Serve": "parcel .dev/parcel/index.html --out-dir .dev/parcel/dist --cache-dir .dev/parcel/cache --open",
     "Build": "rimraf dist && rollup -c",
     "❤️‍🔥 Publish": "rimraf .dev/parcel/dist & rimraf .dev/parcel/cache && npm run Build && yarn publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:JawadAhbab/tn-reactive.git"
   },
   "author": "Turnova",
   "license": "MIT",

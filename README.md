@@ -1,4 +1,4 @@
-## `new Reactive()`
+### `new Reactive()`
 
 Class that creates a reactive state.
 
@@ -20,7 +20,7 @@ handle.disconnect()
 | `.forceUpdate()` | Force callback to all listeners           |
 | `.on(func)`      | Start listening to any update             |
 
-## `useReactive()` & `useReacnull()`
+### `useReactive()` & `useReacnull()`
 
 ```ts
 const state = new Reactive(value)
@@ -30,7 +30,7 @@ const nullable: null | Reactive<T> = null
 const value = useReacnull(nullable)
 ```
 
-## `useReactiveState()` & `useReacnullState()`
+### `useReactiveState()` & `useReacnullState()`
 
 ```ts
 const state = new Reactive(value)
@@ -40,7 +40,7 @@ const nullable: null | Reactive<T> = null
 const [value, setValue] = useReacnullState(nullable)
 ```
 
-## `useReactiveEvent()` & `useReacnullEvent()`
+### `useReactiveEvent()` & `useReacnullEvent()`
 
 ```ts
 const state = new Reactive(value)
@@ -50,7 +50,7 @@ const nullable: null | Reactive<T> = null
 useReacnullEvent(nullable, newval => { ... }, [deps])
 ```
 
-## `useReactiveUpdate()` & `useReacnullUpdate()`
+### `useReactiveUpdate()` & `useReacnullUpdate()`
 
 ```ts
 const state = new Reactive(value)

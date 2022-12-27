@@ -1,6 +1,6 @@
 {
   "name": "tn-reactive",
-  "version": "5.0.2",
+  "version": "6.0.0",
   "description": "",
   "keywords": [],
   "main": "dist/index.js",

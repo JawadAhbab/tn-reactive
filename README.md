@@ -20,30 +20,42 @@ handle.disconnect()
 | `.forceUpdate()` | Force callback to all listeners           |
 | `.on(func)`      | Start listening to any update             |
 
-## `useReactive()`
+## `useReactive()` & `useReacnull()`
 
 ```ts
 const state = new Reactive(value)
 const value = useReactive(state)
+
+const nullable: null | Reactive<T> = null
+const value = useReacnull(nullable)
 ```
 
-## `useReactiveState()`
+## `useReactiveState()` & `useReacnullState()`
 
 ```ts
 const state = new Reactive(value)
-const [value, setValue] = useReactive(state)
+const [value, setValue] = useReactiveState(state)
+
+const nullable: null | Reactive<T> = null
+const [value, setValue] = useReacnullState(nullable)
 ```
 
-## `useReactiveEvent()`
+## `useReactiveEvent()` & `useReacnullEvent()`
 
 ```ts
 const state = new Reactive(value)
 useReactiveEvent(state, newval => { ... }, [deps])
+
+const nullable: null | Reactive<T> = null
+useReacnullEvent(nullable, newval => { ... }, [deps])
 ```
 
-## `useReactiveUpdate()`
+## `useReactiveUpdate()` & `useReacnullUpdate()`
 
 ```ts
 const state = new Reactive(value)
 useReactiveUpdate(state)
+
+const nullable: null | Reactive<T> = null
+useReacnullUpdate(nullable)
 ```

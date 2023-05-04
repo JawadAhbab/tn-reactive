@@ -6,8 +6,9 @@ type Event<T> = { callback: Callback<T> }
 export class Reactive<T> {
   public id = uniqueID()
   private state: T
-  constructor(state: T) {
-    this.state = state
+  public version = 0
+  constructor(state?: T) {
+    this.state = state as T
   }
 
   public get current(): T {
@@ -20,6 +21,7 @@ export class Reactive<T> {
 
   public set(value: T) {
     if (this.state === value) return
+    this.version += 1
     this.state = value
     this.callback(value)
   }

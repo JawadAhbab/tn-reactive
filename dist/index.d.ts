@@ -2,7 +2,8 @@ type Callback<T> = (value: T) => void;
 export declare class Reactive<T> {
     id: string;
     private state;
-    constructor(state: T);
+    version: number;
+    constructor(state?: T);
     get current(): T;
     set current(value: T);
     set(value: T): void;

@@ -12,6 +12,7 @@ var Reactive = /*#__PURE__*/function () {
     _classCallCheck(this, Reactive);
     _defineProperty(this, "id", uniqueID());
     _defineProperty(this, "state", void 0);
+    _defineProperty(this, "version", 0);
     _defineProperty(this, "events", {});
     this.state = state;
   }
@@ -27,6 +28,7 @@ var Reactive = /*#__PURE__*/function () {
     key: "set",
     value: function set(value) {
       if (this.state === value) return;
+      this.version += 1;
       this.state = value;
       this.callback(value);
     }

@@ -15,6 +15,7 @@ handle.disconnect()
 | ---------------- | ----------------------------------------- |
 | `.id`            | `ReactiveState()` instance id             |
 | `.current`       | Current state of `ReactiveState()`        |
+| `.version`       | Current state version                     |
 | `.set(value)`    | Same as setting value to `.current`       |
 | `.emit(value)`   | Best fits when using `useReactiveEvent()` |
 | `.forceUpdate()` | Force callback to all listeners           |

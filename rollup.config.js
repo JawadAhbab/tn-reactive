@@ -22,19 +22,33 @@ const babelplug = function (runtime = true, esm = true) {
   })
 }
 
-const hooks = fs.readdirSync('./src/hooks/').map(file => ({
-  input: `./src/hooks/${file}`,
-  external,
-  output: { file: `dist/hooks/${file.replace(/\.ts$/g, '.js')}`, format: 'cjs' },
-  plugins: [tsplug(), babelplug(true, false)],
-}))
+const hooks = fs.readdirSync('./src/hooks/').map(file => [
+  {
+    input: `./src/hooks/${file}`,
+    external,
+    output: { file: `dist/hooks/${file.replace(/\.ts$/g, '.cjs.js')}`, format: 'cjs' },
+    plugins: [tsplug(), babelplug(true, false)],
+  },
+  {
+    input: `./src/hooks/${file}`,
+    external,
+    output: { file: `dist/hooks/${file.replace(/\.ts$/g, '.esm.js')}`, format: 'esm' },
+    plugins: [tsplug(), babelplug()],
+  },
+])
 
 module.exports = [
   {
     input: './src/index.ts',
     external,
-    output: { file: 'dist/index.js', format: 'cjs' },
+    output: { file: 'dist/index.cjs.js', format: 'cjs' },
     plugins: [tsplug(true), babelplug(true, false)],
   },
-  ...hooks,
+  {
+    input: './src/index.ts',
+    external,
+    output: { file: 'dist/index.esm.js', format: 'esm' },
+    plugins: [tsplug(true), babelplug()],
+  },
+  ...hooks.flat(),
 ]

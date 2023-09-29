@@ -1,9 +1,10 @@
 {
   "name": "tn-reactive",
-  "version": "7.0.0",
+  "version": "7.1.0",
   "description": " ",
   "keywords": [],
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "Serve": "parcel .dev/parcel/index.html --out-dir .dev/parcel/dist --cache-dir .dev/parcel/cache --open",

@@ -1,9 +1,8 @@
 {
   "name": "tn-reactive",
-  "version": "7.2.0",
+  "version": "7.2.1",
   "description": " ",
   "keywords": [],
-  "main": "dist/index.cjs",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

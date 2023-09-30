@@ -1,59 +1,61 @@
 {
   "name": "tn-reactive",
-  "version": "7.2.1",
+  "version": "7.3.0",
   "description": " ",
   "keywords": [],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
+      "require": "./dist/index.js",
       "default": "./dist/index.mjs"
     },
-    "./useReacnull": {
+    "./dist/hooks/useReacnull": {
       "types": "./dist/hooks/useReacnull.d.ts",
-      "require": "./dist/hooks/useReacnull.cjs",
+      "require": "./dist/hooks/useReacnull.js",
       "default": "./dist/hooks/useReacnull.mjs"
     },
-    "./useReacnullEvent": {
+    "./dist/hooks/useReacnullEvent": {
       "types": "./dist/hooks/useReacnullEvent.d.ts",
-      "require": "./dist/hooks/useReacnullEvent.cjs",
+      "require": "./dist/hooks/useReacnullEvent.js",
       "default": "./dist/hooks/useReacnullEvent.mjs"
     },
-    "./useReacnullState": {
+    "./dist/hooks/useReacnullState": {
       "types": "./dist/hooks/useReacnullState.d.ts",
-      "require": "./dist/hooks/useReacnullState.cjs",
+      "require": "./dist/hooks/useReacnullState.js",
       "default": "./dist/hooks/useReacnullState.mjs"
     },
-    "./useReacnullUpdate": {
+    "./dist/hooks/useReacnullUpdate": {
       "types": "./dist/hooks/useReacnullUpdate.d.ts",
-      "require": "./dist/hooks/useReacnullUpdate.cjs",
+      "require": "./dist/hooks/useReacnullUpdate.js",
       "default": "./dist/hooks/useReacnullUpdate.mjs"
     },
-    "./useReactive": {
+    "./dist/hooks/useReactive": {
       "types": "./dist/hooks/useReactive.d.ts",
-      "require": "./dist/hooks/useReactive.cjs",
+      "require": "./dist/hooks/useReactive.js",
       "default": "./dist/hooks/useReactive.mjs"
     },
-    "./useReactiveEvent": {
+    "./dist/hooks/useReactiveEvent": {
       "types": "./dist/hooks/useReactiveEvent.d.ts",
-      "require": "./dist/hooks/useReactiveEvent.cjs",
+      "require": "./dist/hooks/useReactiveEvent.js",
       "default": "./dist/hooks/useReactiveEvent.mjs"
     },
-    "./useReactiveState": {
+    "./dist/hooks/useReactiveState": {
       "types": "./dist/hooks/useReactiveState.d.ts",
-      "require": "./dist/hooks/useReactiveState.cjs",
+      "require": "./dist/hooks/useReactiveState.js",
       "default": "./dist/hooks/useReactiveState.mjs"
     },
-    "./useReactiveUpdate": {
+    "./dist/hooks/useReactiveUpdate": {
       "types": "./dist/hooks/useReactiveUpdate.d.ts",
-      "require": "./dist/hooks/useReactiveUpdate.cjs",
+      "require": "./dist/hooks/useReactiveUpdate.js",
       "default": "./dist/hooks/useReactiveUpdate.mjs"
     }
   },
   "scripts": {
-    "Serve": "parcel .dev/parcel/index.html --out-dir .dev/parcel/dist --cache-dir .dev/parcel/cache --open",
     "Build": "rimraf dist && rollup -c",
-    "❤️‍🔥 Publish": "rimraf .dev/parcel/dist & rimraf .dev/parcel/cache && npm run Build && yarn publish"
+    "❤️‍🔥 Publish": "yarn Build && yarn publish"
   },
   "repository": {
     "type": "git",

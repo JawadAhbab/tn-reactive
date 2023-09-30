@@ -26,7 +26,7 @@ const hooks = fs.readdirSync('./src/hooks/').map(file => [
   {
     input: `./src/hooks/${file}`,
     external,
-    output: { file: `dist/hooks/${file.replace(/\.ts$/g, '.cjs')}`, format: 'cjs' },
+    output: { file: `dist/hooks/${file.replace(/\.ts$/g, '.js')}`, format: 'cjs' },
     plugins: [tsplug(), babelplug(true, false)],
   },
   {
@@ -41,14 +41,14 @@ module.exports = [
   {
     input: './src/index.ts',
     external,
-    output: { file: 'dist/index.cjs', format: 'cjs' },
+    output: { file: 'dist/index.js', format: 'cjs' },
     plugins: [tsplug(true), babelplug(true, false)],
   },
   {
     input: './src/index.ts',
     external,
     output: { file: 'dist/index.mjs', format: 'esm' },
-    plugins: [tsplug(true), babelplug()],
+    plugins: [tsplug(), babelplug()],
   },
   ...hooks.flat(),
 ]
